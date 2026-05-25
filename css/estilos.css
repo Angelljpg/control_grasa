@@ -1,0 +1,119 @@
+body { 
+    background-color: #f2f5f8; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header-progel { 
+    background: linear-gradient(135deg, #007bdc, #1a8ae1); 
+    color: white; 
+    padding: 15px 0; 
+}
+
+.main-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -10px rgba(0, 123, 220, 0.15);
+}
+
+.main-card-header {
+    background: linear-gradient(135deg, #007bdc, #1a8ae1);
+    border-bottom: 0;
+    padding: 20px;
+}
+
+/* Inputs */
+.form-control, .input-group-text {
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 220, 0.25);
+    border-color: #007bdc;
+}
+
+/* Botones de Sí/No tipo píldora - ahora AZULES cuando están activos */
+.btn-pill {
+    border-radius: 40px;
+    font-weight: 600;
+    padding: 8px 30px;
+    transition: all 0.2s;
+}
+
+.btn-outline-success {
+    color: #007bdc;
+    border-color: #007bdc;
+}
+.btn-outline-success:hover {
+    background-color: #007bdc;
+    border-color: #007bdc;
+}
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Estilo activo para el SÍ (ahora azul) */
+.btn-check:checked + .btn-outline-success { 
+    background-color: #007bdc; 
+    border-color: #007bdc;
+    color: white; 
+    box-shadow: 0 4px 12px rgba(0, 123, 220, 0.4);
+}
+
+.btn-check:checked + .btn-outline-danger { 
+    background-color: #dc3545; 
+    border-color: #dc3545;
+    color: white; 
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+/* Felpas (se mantiene verde/rojo por usabilidad) */
+.btn-felpa { 
+    border-radius: 14px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.2s ease-in-out; 
+}
+
+.btn-felpa.btn-success { 
+    background-color: #10b981; 
+}
+.btn-felpa.btn-success:hover {
+    background-color: #059669;
+}
+
+.btn-felpa.btn-danger { 
+    background-color: #ef4444; 
+}
+.btn-felpa.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+.btn-felpa:active { 
+    transform: scale(0.96); 
+}
+
+/* Botón de guardar - con tu paleta AZUL */
+.btn-guardar {
+    border-radius: 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #007bdc, #1a8ae1);
+    border: none;
+    padding: 14px;
+}
+
+.btn-guardar:hover {
+    background: linear-gradient(135deg, #0069c0, #1479d0);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 220, 0.3);
+}
+
+/* Panel de fondo para la sección de felpas */
+.bg-light {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0;
+}
