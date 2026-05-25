@@ -153,7 +153,7 @@ $puesto = $_SESSION['puesto'];
                 </div>
                 <div>
                     <h4 class="m-0 fw-bold">Progel</h4>
-                    <small class="text-light opacity-75">Sistema de Mantenimiento</small>
+                    <small class="text-light opacity-75">Sistema de Control de Grasa</small>
                 </div>
             </div>
             <div class="text-end">

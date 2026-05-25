@@ -17,10 +17,27 @@ $stmt_check = $conexion->prepare($sql_check);
 $stmt_check->execute([$fecha_actual]);
 
 if($stmt_check->fetchColumn() > 0) {
-    echo "<script>
-            alert('Error: El drenado de las 12:00 PM ya fue registrado hoy.'); 
-            window.location.href = '../menu.php';
-          </script>";
+    echo "<!DOCTYPE html>
+    <html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        <style>body { background-color: #f2f5f8; font-family: 'Segoe UI', Arial, sans-serif; }</style>
+    </head>
+    <body>
+        <script>
+            Swal.fire({
+                title: '¡Ups!',
+                text: 'Error: El drenado de las 12:00 PM ya fue registrado hoy.',
+                icon: 'error',
+                confirmButtonColor: '#dc3545',
+                confirmButtonText: 'Volver'
+            }).then((result) => {
+                window.location.href = '../menu.php';
+            });
+        </script>
+    </body>
+    </html>";
     exit();
 }
 
@@ -60,10 +77,29 @@ try {
         $observaciones
     ]);
 
-    echo "<script>
-            alert('¡Drenado de las 12:00 PM registrado exitosamente!');
-            window.location.href = '../menu.php';
-          </script>";
+    echo "<!DOCTYPE html>
+    <html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Procesando...</title>
+        <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        <style>body { background-color: #f2f5f8; font-family: 'Segoe UI', Arial, sans-serif; }</style>
+    </head>
+    <body>
+        <script>
+            Swal.fire({
+                title: '¡Excelente!',
+                text: '¡Drenado de las 12:00 PM registrado exitosamente!',
+                icon: 'success',
+                confirmButtonColor: '#10b981',
+                confirmButtonText: 'Aceptar'
+            }).then((result) => {
+                window.location.href = '../menu.php';
+            });
+        </script>
+    </body>
+    </html>";
 
 } catch(PDOException $e) {
     echo "Error al guardar el registro: " . $e->getMessage();
